@@ -23,13 +23,13 @@ void FindNumberInArray(int[] array, int x)
     for (int i = 0; i < array.Length; i++)
         {
         if (array[i] == x)
+        {
             result = i; 
-        else
-            result = -1;           
+            Console.WriteLine($"Число {x} находится под индексом {result}");
+        }       
         }
-        Console.WriteLine($"Число {x} находится под индексом {result}");
 }
 
 int[] array = CreateArray(10, -10, 10);
 PrintArray(array);
-FindNumberInArray(array, -4);
+FindNumberInArray(array, -5);

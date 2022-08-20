@@ -21,10 +21,7 @@ void ReplaceNegativePozitive(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
         {
-        if (array[i] > 0)
-            array[i] = -array[i];
-        else
-            array[i] *= -1; 
+            array[i] *= -1;
         }
 }
 
