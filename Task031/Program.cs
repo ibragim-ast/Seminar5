@@ -1,8 +1,7 @@
-﻿
-int[] CreateArray(int lenght, int min, int max)
+﻿int[] CreateArray(int length, int min, int max)
 {
-    int[] array = new int[lenght];
-    for(int i = 0; i < lenght; i++)
+    int[] array = new int[length];
+    for (int i = 0; i < length; i++)
     {
         array[i] = new Random().Next(min, max+1);
     }
@@ -11,33 +10,32 @@ int[] CreateArray(int lenght, int min, int max)
 
 void PrintArray(int[] array)
 {
-    for(int i = 0; i < array.Length; i++)
-        Console.Write($"{array} ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
     Console.WriteLine();
 }
 
-void FindPositiveSum(int [] arr)
-    {
-        int sum = 0;
-        for(int i = 0; i < arr.Length; i++)
-        {
-            if (arr[i] > 0)
-                sum += arr[i];
-        }
-    }
+int FindPositiveSum(int[] array)
+{
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+        if (array[i] > 0)
+            sum += array[i];
+    return sum;
+}
 
-void FindNegativeSum(int [] arr)
-    {
-        int sum = 0;
-        for(int i = 0; i < arr.Length; i++)
-        {
-            if (arr[i] < 0)
-                sum += arr[i];
-        }
-    }
+int FindNegativeSum(int[] array)
+{
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+        if (array[i] < 0)
+            sum += array[i];
+    return sum;
+}
 
 int[] array = CreateArray(12, -9, 9);
-FindPositiveSum(array);
-FindNegativeSum(array);
 PrintArray(array);
-
+Console.WriteLine($"Сумма положительных элементов равна {FindPositiveSum(array)}");
+Console.WriteLine($"Сумма отрицательных элементов равна {FindNegativeSum(array)}");
