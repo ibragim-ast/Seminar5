@@ -20,12 +20,12 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-void PrintNumber10100(int[] array)
+void PrintNumber10100(int[] array, int min, int max)
 {
     int num = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i] < 100 && array[i] > 10)
+        if(array[i] < max && array[i] > min)
         num += 1;
     }
     Console.WriteLine($"Количество чисел от 10 до 100 в массиве равно {num}");
@@ -33,4 +33,4 @@ void PrintNumber10100(int[] array)
 
 int[] array = CreateArray123(123, 0, 123);
 PrintArray(array);
-PrintNumber10100(array);
+PrintNumber10100(array, 10, 100);
