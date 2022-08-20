@@ -1,4 +1,7 @@
-﻿int[] CreateArray123(int length, int min, int max)
+﻿// Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов, значения которых 
+// лежат в отрезке [10, 99]
+
+int[] CreateArray123(int length, int min, int max)
 {
     int[] array = new int[length];
     for (int i = 0; i < length; i++)
@@ -17,5 +20,17 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-int[] array = CreateArray123(123, 10, 100);
+void PrintNumber10100(int[] array)
+{
+    int num = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] < 100 && array[i] > 10)
+        num += 1;
+    }
+    Console.WriteLine($"Количество чисел от 10 до 100 в массиве равно {num}");
+}
+
+int[] array = CreateArray123(123, 0, 123);
 PrintArray(array);
+PrintNumber10100(array);
