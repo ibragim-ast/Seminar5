@@ -1,4 +1,5 @@
-﻿int[] CreateArray(int length, int min, int max)
+﻿// Напишите программу замены элементов массива: положительные отрицательные, и наоборот
+int[] CreateArray(int length, int min, int max)
 {
     int[] array = new int[length];
     for (int i = 0; i < length; i++)

@@ -26,8 +26,10 @@ void FindNumberInArray(int[] array, int x)
         {
             result = i; 
             Console.WriteLine($"Число {x} находится под индексом {result}");
+            return;
         }       
         }
+    Console.WriteLine($"В массиве нет числа {x}");
 }
 
 int[] array = CreateArray(10, -10, 10);
