@@ -25,9 +25,8 @@ void FindOddIndexSum(int[] array)
     int sum = 0;
     int length = array.Length;
 
-    for (int i = 0; i < length; i++)
+    for (int i = 1; i < length; i += 2)
     {
-        if (i % 2 == 1)
         sum += array[i];
     }
     Console.WriteLine($"Сумма элементов стоящих на нечетных позициях равно {sum}");
