@@ -29,7 +29,7 @@ void FindOddIndexSum(int[] array)
     {
         sum += array[i];
     }
-    Console.WriteLine($"Сумма элементов стоящих на нечетных позициях равно {sum}");
+    Console.WriteLine($"Сумма элементов стоящих на нечетных позициях равна {sum}");
 }
 
 int[] array = CreateArray(10, 0, 10);

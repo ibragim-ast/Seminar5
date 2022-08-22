@@ -1,7 +1,7 @@
 ﻿// Задайте массив заполненный случайными положительными трехзначными числами. Напишите программу, которая
 // покажет количество четных чисел в массиве
 
-int[] CreateArray100999(int length, int min, int max)
+int[] CreateArray(int length, int min, int max)
 {
     int[] array = new int[length];
     for (int i = 0; i < length; i++)
@@ -32,6 +32,6 @@ void EvenNumbers(int[] array)
     Console.WriteLine($"В массиве {count} четных чисел");
 }
 
-int[] array = CreateArray100999(10, 100, 1000);
+int[] array = CreateArray(10, 100, 1000);
 PrintArray(array);
 EvenNumbers(array);

@@ -24,7 +24,7 @@ int[] CreateNewArray(int[] array)
 {
     int count = array.Length / 2;
         if (count % 2 != 0)
-            count = count + 1;
+            count += 1;
     int startNumber = 0;
     int endNumber = array.Length -1;
     int length = count;
