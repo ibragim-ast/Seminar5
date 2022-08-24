@@ -18,7 +18,7 @@ void PrintArray(double[] array)
     }
     Console.WriteLine();
 }
-`
+
 void DifferenceMinMax(double[] array)
     {
         int length = array.Length;
