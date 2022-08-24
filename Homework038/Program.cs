@@ -1,4 +1,4 @@
-﻿// Задайте массив вещественных чисел. Наайдите разницу между максимальным и минимальным элементом массива.
+﻿// Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементом массива.
 
 double[] CreateArray(int length)
 {
@@ -18,7 +18,7 @@ void PrintArray(double[] array)
     }
     Console.WriteLine();
 }
-
+`
 void DifferenceMinMax(double[] array)
     {
         int length = array.Length;

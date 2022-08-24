@@ -22,21 +22,18 @@ void PrintArray(int[] array)
 
 int[] CreateNewArray(int[] array)
 {
-    int count = array.Length / 2;
-        if (count % 2 != 0)
-            count += 1;
-    int startNumber = 0;
-    int endNumber = array.Length -1;
-    int length = count;
+    int length = array.Length / 2;
+        if (length % 2 == 1)
+            length += 1;
     int[] newArray = new int[length];
 
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < length; i++)
     {
-        int result = array[startNumber] + array[endNumber];
-        newArray[i] = result;
-        startNumber++;
-        endNumber--;
+        newArray[i] = array[i] * array[array.Length -1 -i];
     }
+    
+    if (array.Length % 2 == 1)
+        newArray[array.Length / 2] = array[array.Length / 2];
     return newArray;
 }
 
